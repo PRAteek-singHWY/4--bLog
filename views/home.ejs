@@ -1,0 +1,31 @@
+<%- include("partials/header") -%>
+
+  <h1>Home</h1>
+
+  <% posts.forEach((foundPost)=>{  %>
+    <div>
+      <h3 class="blogTitle">
+        <%= foundPost.title %>
+      </h3>
+
+      <!-- titleKebabCase has been made here -->
+
+      <% if(foundPost.post.length> 200) { %>
+        <% var titleKebabCase=foundPost.title.toLowerCase().replace(/[^a-z0-9\-]+/g, '-' ).replace(/\-+/g, '-' ).trim();
+        %>
+
+        
+          <p id="para_Hom">
+            <%= foundPost.post.slice(0,200) %>... <a href="/post/<%= foundPost._id %>">Read More</a>
+          </p>
+          <% } 
+          
+          else { %>
+            <p id="para_Hom">
+              <%= foundPost.post %>
+            </p>
+            <% } %>
+    </div>
+    <br>
+  <%})%>
+      <%- include("partials/footer") -%>
