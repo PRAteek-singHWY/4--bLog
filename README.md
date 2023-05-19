@@ -1,6 +1,6 @@
 # bLog
 
 
-Upate Customised Latest -- bLoG WebsiTe with mongoDB
+bLoG WebsiTe with Latest Updates and Custom Styles
 
 HTML CSS mongoDB mongoose JAVASCRIPT EXPRESS.js NODE.js
